@@ -19,4 +19,4 @@ Lab Steps:
 
     Remember: The router is acting as the default gateway for all 4 subnets
     Each interface on the router will need to be assigned the IP address for the router on its respective subnet
-    This is typically the first useable IP address on that subnet
+    This is typically the first useable IP address on that subnet 
