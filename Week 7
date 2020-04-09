@@ -1,0 +1,22 @@
+Lab 7-2: Simple Subnet Design- Packet Tracer
+
+Objective: Implement the subnet design for the scenario detailed in Lab 7-1 Simple Subnet Design
+
+Goals:
+
+    Provided a subnet design, configure proper IP addresses and subnet masks on the router
+    Assign proper IP addresses, subnet masks, and default gateways to clients in the subnets
+
+
+Lab Steps:
+
+1. Open up your table from Lab 7-1 that contains the information for the 4 subnets
+
+2. Connect a copper cable from Engineering Switch to the FastEthernet0 interface on the Router
+
+3. Connect copper cables from the Engineering PC's to the Engineering Switch (any port on the switch is fine - but it is helpful to keep them in order)
+
+
+    Remember: The router is acting as the default gateway for all 4 subnets
+    Each interface on the router will need to be assigned the IP address for the router on its respective subnet
+    This is typically the first useable IP address on that subnet
