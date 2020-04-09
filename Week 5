@@ -1,0 +1,23 @@
+Simple Routing Lab
+
+Objective: Configure and observe a simple routed network.
+
+Goals:
+
+    Observe the Layer 2 header changes as a packet crosses a router
+    Recognize the role of the default gateway
+
+Open a web browser and go to 192.168.1.1. 1 point
+You should get a page saying that your connection is not secure.
+
+    Click on the 'Advanced' button in the lower right, and then click the 'Add Exception' button that appears at the bottom of the page.
+    In the new window that pops up, uncheck the 'Permanently store this exception' box in the lower left, and then click the 'Confirm Security Exception' button.
+
+Configure the IPs on the router interfaces. 1point
+
+        From the Dashboard Interfaces window, click "Actions" for the interface you want to change, and then click "Config".
+        In the window that pops up, choose "Manually Define IP Address" in the Address drop-down menu.
+        Assign the IP per the diagram above (e.g. 192.168.3.1/24)
+
+A network with multiple layer 2 switches - but no layer 3 routers is called a _____ network? 
+Flat Network
