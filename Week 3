@@ -1,0 +1,46 @@
+Lab 3-1 - ARP Observation 
+
+Objective: Observe Address Resolution Protocol operations and draw conclusions on how Layer 2 (MAC) and Layer 3 (IP) addresses interoperate
+
+Goals:
+
+    Understand how ARP is used between hosts on a LAN
+    Recognize the basic flow of ARP
+    Identify the role of broadcasts with ARP
+
+Open a Command Prompt as Administrator on your windows 10 VM
+
+    From start button - type cmd- and then right-click "command prompt" and select Run As Administrator
+    or Windows Key-x then "a"
+
+Run "ipconfig /all" and make a note of your default gateway
+Run the command (This will delete any saved ARP results):
+
+    netsh interface ip delete arpcache
+
+Open wireshark and start a capture
+
+LAB 3-2 - Exploring Broadcast Domains 
+
+Objective: To demonstrate how easy it is to spoof a MAC address, and observe the potential
+consequences.
+Goal: Use a MAC changing tool to spoof a MAC address.
+
+
+MAC addresses are often called the “burned in address”. NIC manufactures will assign MAC
+address to the device and is traditionally stored in a ROM chip and preloaded into non-volatile memory.
+However, NICs such as some using USB or created by Virtual Machines, do not have the MAC address preloaded in firmware and rely on software drivers to assign the MAC. Therefore, it is possible on many systems to "change" the MAC address as used by the O.S.
+This can be demonstrated through a tool like MACChanger for Kali.
+
+3. Type the following to see info on the macchanger command-line tool
+macchanger --help
+4. Type the following command to show the current/permanent MAC address
+macchanger -s eth0
+5. Exchange MAC address information with your neighbor.
+6. Record the following information in your lab submission (1 Point):
+Your neighbor's MAC address
+7. Change your MAC address on the Kali box to your neighbor's MAC, and have them switch
+to yours.
+To replace your MAC address, use the command: macchanger -m xx:xx:xx:xx:xx:xx eth0
+where xx:xx:xx is your neighbor's MAC
+8. You should see that the MAC has changed
