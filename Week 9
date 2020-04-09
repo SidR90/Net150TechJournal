@@ -1,0 +1,42 @@
+LAB 9-1: Packet Tracer - Static Routing Class Lab
+
+Objective: Observe and reflect the implications of internetworking when connecting multiple routers
+
+Goals: 
+
+    Understand the limitations of routers to identify networks that are not directly connected
+    Configure simple static routes to allow packets to cross multiple routers to a remote network
+
+"Routes" tell routers how to reach other networks.  They don't need to include a lot of information - just the network address, subnet mask, and which of it's interfaces to send out of.
+
+Examples: 
+R1(config)#ip route 192.168.30.0 255.255.255.0 10.10.20.2 
+R1(config)#ip route 192.168.10.0 255.255.255.0 10.10.10.2 
+R2(config)#ip route 192.168.10.0 255.255.255.0 10.10.20.1 
+R2(config)#ip route 10.10.10.0 255.255.255.0 10.10.20.1 
+R2(config)#ip route 192.168.20.0 255.255.255.0 10.10.20.1 
+
+Lab 9-2 Static Routing:
+
+Objective: Configure two routers and multiple subnets using static routes
+
+Goals:
+
+    Observe the need for routing tables when interconnecting multiple networks across multiple routers
+    Understand the components that  must be included in a routing table entry
+    Use static route entries to configure routing tables when connecting two or more routers
+
+
+Lab:
+
+The class is charged with setting up a network for a small business with 2 sites - West and East.  The organization has been assigned 154.103.16.0/21 as it's network address.  It needs to be subdivided into the following networks:
+
+    SalesWest (300 users)
+    FinanceWest (200 users)
+    SalesEast (100 users)
+    FinanceEast (50 users)
+    EAST-WEST link for the routers
+
+
+
+
