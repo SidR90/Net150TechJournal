@@ -1,0 +1,16 @@
+Lab 6-2 Simple Subnetting in Packet Tracer
+
+Objective: Given a starting network, properly develop a simple subnet scheme for the scenario and implement correctly on routers and connected devices
+
+Goals:
+
+    Identify how many subnets are required based on a network map
+    Identify the proper subnet mask to use for the scenario
+    Identify the network address, broadcast and useable host range for each subnet
+    Assign proper addresses to devices based on their subnet location
+    Observe connectivity (pings) when 3 routers are connected
+o Do:
+
+    Assign an IP address from the proper subnet to each router interface.
+    Assign an IP address from the proper subnet to each PC
+        Make sure to include proper default gateway and subnet mask
