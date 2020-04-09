@@ -1,0 +1,41 @@
+
+Lab 8-1: Tracing Routes
+
+Objectives
+
+Part 1: Test Network Connectivity Using Ping
+
+Part 2: Trace a Route Using Windows Tracert
+
+Part 3: Compare Traceroute Results
+
+Background
+
+Route tracing computer software is a utility that lists the routers that data has to travel through from source network to destination. This network tool is typically executed at the command line as:
+
+    tracert <destination network name or end device address>  (Microsoft Windows systems)
+    traceroute <destination network name or end device address> (Unix and similar systems)
+
+Each router represents a point where one network connects to another network and through which the data packet was forwarded.
+
+The number of routers is known as the number of "hops" the data traveled from source to destination.
+
+Two trace routes between the same source and destination conducted some time apart may produce different results. This is due to the "meshed" nature of the interconnected networks.
+
+
+For Africa: C:\> ping www.afrinic.net
+
+For Australia: C:\> ping sydney.edu.au as an example of an Austrailan site
+
+For Europe: C:\> ping ns.ripe.net
+
+For South America: C:\> ping lacnic.net
+
+Each “hop” represents a router.
+
+    The tracert tool shows you what path through the network a packet of information takes to reach its final destination.
+    The tracert tool also gives you an idea of how fast traffic is going on each segment of the network.
+    Three packets are sent to each router in the path, and the return time is measured in milliseconds. 
+    
+    Which TCP-IP Protocol is responsible for defining the unique address of the source and destination hosts and routing the packets correctly?
+    Internet Protocol
