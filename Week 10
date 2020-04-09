@@ -1,0 +1,61 @@
+Intro To Dynamic Routing
+
+What is a protocol?
+ A protocol is to exchange network information through each other.
+ 
+ Please list types of router metrics. Router metrics are metrics used by a router to make routing decisions.
+
+Load
+
+Latency
+
+Number of Hops
+
+Path reliability
+
+Path bandwidth
+
+ Packet Tracer Class Lab - Understanding RIP
+
+This Packet Tracer lab has been provided to help you gain a better understanding of how to configure and troubleshoot RIP version 2 in this lab we will configure a basic lab topology, enable RIPv2 on the routers and configure them to advertise their networks.
+Learning Objectives:
+
+    Review basic router and switch configuration.
+    Enable RIPv2 on a router.
+    Advertise networks using RIPv2.
+    Observe and inspect RIPv2 Packets
+
+
+
+The Routing Information Protocol (RIP) is one of the oldest distance-vector routing protocols, which uses the hop count as a routing metric. 
+RIP avoids routing loops by employing a limit on the number of hops permitted in a path from the source to a destination. 
+The maximum number of hops permitted for RIP is 15. 
+A hop count of 16 is considered an infinite distance, in other words the route is considered unreachable. 
+Despite this limitation, RIP works great for basic route communications between devices.
+
+
+
+Cisco routers don't enable RIPv2 by default. To use RIPv2, you must use the ver 2 command in RIP Router Configuration Mode.
+RIP uses hop count as it’s metric.
+
+RIP performs "routing by rumor" and is more prone to loops than other routing protocols. 
+That's because a RIP router sends its entire routing table to every other router. 
+All other routers do the same, and because there's no real neighbor relationship or calculation of routes, the routers have little firsthand knowledge of available networks.
+
+Lab Steps: 
+
+router rip
+
+version 2
+
+Example Network:
+
+network 192.168.30.0
+
+network 10.10.20.0
+
+In Packet Tracer - switch to "Simulation Mode" (Stopwatch icon in Lower Right)
+Under Event List Filters - Visible Event - Click Show All/None
+Then click Edit Filters - and Select RIP
+Click the "Capture/Forward" button in the lower center of the screen repeatedly. You should see RIP packets traversing the network.
+
