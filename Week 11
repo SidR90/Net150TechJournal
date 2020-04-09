@@ -1,0 +1,46 @@
+Lab 11-1: VLANs in Packet Tracer Part 1 
+
+
+Objective: Demonstrate understanding of VLAN uses and limitations and simple configuration of routing between VLANs
+
+Goals:
+
+    Demonstrate  need and impact of  VLANs on networks
+    Recognize the distinction between logical and physical switching
+    Determine the difference between Trunk and Access ports
+    Configure a switch to support multiple VLANs
+    Configure switch access ports
+    Configure switch trunk ports
+
+Lab: On 1st Floor Switch, Go to Config/VLAN Database and add the VLANs the switch will support:
+
+    VLAN Number: 10 Name: ENG
+    VLAN Number: 20 Name: MKT
+    VLAN Number: 30 Name: ACT
+
+Then, configure which ports are in which VLAN from Config tab by changing the VLAN number for the Access Port configuration per interface
+
+    FastEthernet 0/1 can be VLAN 10 (ENG)
+    FastEthernet 0/2 can be VLAN 20 (MKT)
+    FastEthernet 0/3 can be VLAN 30 (ACT)
+
+Then, configure the Trunk port that will be used to connect the switch to the 2nd Floor Switch
+
+    GigabitEthernet 0/1 change to Trunk and add VLANs 10, 20, and 30 (leaving the other default VLANs checked is fine)
+    
+    Objective: Demonstrate understanding of VLAN uses and limitations and simple configuration of routing between VLANs
+
+Lab 11-1: VLANs in Packet Tracer Part 2
+Goals:
+
+    Configure inter-vlan routing on a multi-layer switch
+   
+   At the end of Lab 11-1, PC's on the same VLAN should be able to ping each other.  But, without a router acting as the default gateway for each of the VLANs/subnets - the PC's cannot ping PC's on different VLANs.
+
+To fix that, you will now follow the steps to connect the router.  The router has already been configured with the IP addresses to act as Default Gateway for the 3 VLANs
+
+    
+  Commands: 
+    switchport trunk native vlan 10    (this makes it so any device can read the fram from a VLAN)
+    switchport nonegotiate
+    exit
