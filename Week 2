@@ -1,0 +1,32 @@
+Simple Linux Setup Objective: Configure a node and observe basic connectivity on a simple LAN using the star topology
+
+Goals: 
+
+    Familiarize oneself with bootable USBs and Kali Linux
+    Configuring a static address assignment
+    Observing the function of a network switch
+    Using ping to test connectivity
+
+Boot Into Linux Steps:
+
+Plug the USB thumb drive provided by your instructor into the back of your workstation.
+Reboot the workstation. When you see the line "Press <CTRL + P> to enter MEBX setup menu", press F8. This will bring up the boot device menu.
+Select "VenderCoProductMode" from the boot menu.
+When the MultiBootUSB menu appears, select the "kali-linux-..." option.
+Finally, when the Kali menu appears, select the "Live (amd64)" option. 
+
+Observing Lan Activity Objective: In this lab, students will observe traffic in a simple LAN
+
+Goals:
+
+    Understand the role of MAC addresses in LAN communication
+    Observe ARP communication
+    Introduce basic features of Wireshark and traffic analysis
+    
+    
+   Type "ipconfig /all" (Windows) or "ip route show" (Linux) and record the IP address of the default gateway
+   
+   ping ip_address_of_gateway
+   
+   WireShark: TIP: You can filter for ICMP by typing "ICMP" in the Wireshark Display Filter and hitting the "arrow" to apply
+
